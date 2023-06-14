@@ -1,0 +1,24 @@
+### Temp folder ###
+/tmp
+
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history
+
+### Goland ###
+/.idea/
+
+### Go ###
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.zip
+*.bin
+.DS_Store
