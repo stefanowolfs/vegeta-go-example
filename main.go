@@ -8,9 +8,10 @@ import (
 )
 
 const (
-	frequency = 100
-	duration  = 4 * time.Second
-	targetUrl = "http://localhost:3005/api/v1/expenses?user-id=1&month=10"
+	frequency  = 100
+	duration   = 4 * time.Second
+	targetUrl  = "http://google.com"
+	httpMethod = "GET"
 )
 
 type AttackPlan struct {
@@ -42,7 +43,7 @@ func planAttack() AttackPlan {
 	var attackPlan AttackPlan
 	attackPlan.rate = vegeta.Rate{Freq: frequency, Per: time.Second}
 	attackPlan.targeter = vegeta.NewStaticTargeter(vegeta.Target{
-		Method: "GET",
+		Method: httpMethod,
 		URL:    targetUrl,
 	})
 	attackPlan.attacker = vegeta.NewAttacker()
